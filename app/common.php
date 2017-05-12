@@ -55,6 +55,7 @@ EOT;
 
 function bodyBottom() {
     echo <<<'EOT'
+        </div>
 </body>
 EOT;
 }
