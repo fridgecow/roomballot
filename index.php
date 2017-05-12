@@ -26,14 +26,9 @@ if (auth(true)) {
 
     <?php bodyTop(); ?>
 
-    <h1>Welcome!</h1>
-    <p>This site aims to be a definitive source of information on all rooms available for students at Robinson College.</p>
-    <p>For help using this site, more details on choosing rooms, or to report any issues, please email <a href="mailto:rooms@rcsa.co.uk">rooms@rcsa.co.uk</a>.
-    <h2>Room ballot</h2>
-    <p>The balloting process will take place around February, where the order of room choosing is decided.  You'll receive emails later on with the actual times.</p>
-    <p>For first years, first decide who you want to choose rooms with (you can just choose on your own, or be in a group of up to 5 people).  Being in a group does not require you all to choose rooms in the same place, it just allows you to choose at the same time.  Note that if you're intending to choose a set (for 2 people) or flat (3 people), everyone involved must be in the same group.</p>
-    <p>Write your name, plus anyone else in your group, on a piece of paper, and place it in the ballot box in the Porter's Lodge.  A few days after the ballot box closes, the drawing will take place to decide on the order with the year group.</p>
-    <p>As room choosing approaches, a list of names and times will be posted in the JCR.  You must turn up to choose your room at the time given, otherwise you may miss your turn.</p>
+    <h1>Fitz JCR Housing Ballot System</h1>
+    <p>For security reasons, we request that you keep information regarding room rents and photographs of College-owned rooms strictly confidential to the members of Fitzwilliam College. If anyone is known to have violated this rule, all information will be withdrawn and the person in question will be referred to the Senior Tutor and the Dean.</p>
+    <p>If you have any problem with the housing ballot you should contact the JCR Vice President at <a href="mailto:jcr.vice.president@fitz.cam.ac.uk">jcr.vice.president@fitz.cam.ac.uk</a>. To report any technical issues with this website you are invited to contact the JCR Website Officer in confidence at <a href="mailto:jcr.website@fitz.cam.ac.uk">jcr.website@fitz.cam.ac.uk</a>.</p>
 
     <?php bodyBottom(); ?>
 

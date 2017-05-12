@@ -5,9 +5,9 @@ function header() {
         <head>
             <meta charset="UTF-8">
             <meta name="author" content="Fitzwilliam College JCR">
-            <meta name="title" content="Fitz JCR Room Ballot System">
+            <meta name="title" content="Fitz JCR Housing Ballot System">
             <meta name="description" content="">
-            <title>Fitz JCR Room Ballot System</title>
+            <title>Fitz JCR Housing Ballot System</title>
             <link href="/include/img/icon.ico" rel="shortcut icon">
             <link href="/include/css/bootstrap.min.css" rel="stylesheet">
             <link href="/include/css/bootstrap-theme.min.css" rel="stylesheet">

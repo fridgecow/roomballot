@@ -1,10 +1,9 @@
-Fitzwilliam College JCR Room Balloting System
+Fitz JCR Housing Ballot System
 ====
 
-This is the repository and project page for Fitzwilliam College JCR's online Room Balloting System.
+This is the repository for Fitzwilliam College JCR's online Room & Housing Ballot System.
 
-It's designed to run on the SRCF's web server, but in theory it should be easily deployed elsewhere too.
-
+The app itself is written in PHP and is designed to run on the SRCF's web server, but in theory it should be easily deployed elsewhere too.
 
 Contributing
 ----
