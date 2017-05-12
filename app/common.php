@@ -1,7 +1,7 @@
 <?php
 
-function header() {
-    echo <<<EOT
+function head() {
+    echo <<<'EOT'
         <head>
             <meta charset="UTF-8">
             <meta name="author" content="Fitzwilliam College JCR">
@@ -21,7 +21,7 @@ EOT;
 }
 
 function bodyTop() {
-    echo <<<EOT
+    echo <<<'EOT'
         <body>
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
@@ -58,7 +58,7 @@ EOT;
 }
 
 function bodyBottom() {
-    echo <<<EOT
+    echo <<<'EOT'
         </body>
 EOT;
 }
