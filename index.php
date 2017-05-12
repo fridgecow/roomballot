@@ -22,7 +22,7 @@ require_once "app/common.php";
 // }
 ?><!DOCTYPE html>
 <html>
-    <?php header(); ?>
+    <?php head(); ?>
 
     <?php bodyTop(); ?>
 
