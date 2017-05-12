@@ -2,7 +2,7 @@
 
 function head() {
     echo <<<'EOT'
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta name="author" content="Fitzwilliam College JCR">
         <meta name="title" content="Fitz JCR Housing Ballot System">
@@ -22,7 +22,7 @@ EOT;
 
 function bodyTop() {
     echo <<<'EOT'
-    <body>
+<body>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -55,7 +55,7 @@ EOT;
 
 function bodyBottom() {
     echo <<<'EOT'
-    </body>
+</body>
 EOT;
 }
 
