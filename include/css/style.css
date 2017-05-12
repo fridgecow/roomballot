@@ -1,0 +1,169 @@
+body {
+    overflow-y: scroll;
+}
+body > .container-fluid {
+    padding-top: 50px;
+}
+.navbar-brand img {
+    height: 45px;
+    margin: -2px 5px 0 2px;
+    vertical-align: top;
+}
+@media (max-width: 767px) {
+    .navbar-text {
+        padding: 0 15px;
+    }
+}
+.alert {
+    margin-top: 25px;
+}
+.page {
+    display: none;
+}
+.modal-body .alert {
+    margin: 0 0 10px;
+}
+.modal-footer .btn.pull-right {
+    margin-left: 5px;
+}
+#overview-prompt {
+    display: none;
+}
+#overview-prompt a {
+    cursor: pointer;
+}
+#overview table, #available table {
+    margin-top: -10px;
+}
+#overview tr.group th, #available tr.group th {
+    border-top: 0;
+    padding: 5px 0;
+}
+#overview tr.group th:hover, #available tr.group th:hover {
+    background: none;
+}
+#overview tr.group h2, #available tr.group h2 {
+    margin: 10px 0 5px;
+}
+#overview tr.headings th, #available tr.headings th {
+    background-color: #f5f5f5;
+}
+#overview tr.room, #available tr.room {
+    cursor: pointer;
+}
+#overview tr.unavailable {
+    color: #aaa;
+    cursor: not-allowed;
+}
+/* force room name on one line */
+#overview table th:nth-of-type(1),
+#overview table td:nth-of-type(1),
+#available table th:nth-of-type(1),
+#available table td:nth-of-type(1) {
+    white-space: nowrap;
+}
+/* hide columns on small screens */
+@media (max-width: 1100px) {
+    #overview table.overview-responsive th:nth-of-type(5),
+    #overview table.overview-responsive td:nth-of-type(5),
+    #overview table.overview-responsive th:nth-of-type(6),
+    #overview table.overview-responsive td:nth-of-type(6),
+    #overview table.overview-responsive th:nth-of-type(7),
+    #overview table.overview-responsive td:nth-of-type(7),
+    #overview table.overview-responsive th:nth-of-type(8),
+    #overview table.overview-responsive td:nth-of-type(8),
+    #available table.overview-responsive th:nth-of-type(5),
+    #available table.overview-responsive td:nth-of-type(5),
+    #available table.overview-responsive th:nth-of-type(6),
+    #available table.overview-responsive td:nth-of-type(6),
+    #available table.overview-responsive th:nth-of-type(7),
+    #available table.overview-responsive td:nth-of-type(7),
+    #available table.overview-responsive th:nth-of-type(8),
+    #available table.overview-responsive td:nth-of-type(8) 
+    {
+        display: none;
+    }
+    #overview-prompt {
+        display: block;
+    }
+}
+@media (max-width: 950px) {
+    #overview table.overview-responsive th:nth-of-type(4),
+    #overview table.overview-responsive td:nth-of-type(4),
+    #overview table.overview-responsive th:nth-of-type(9),
+    #overview table.overview-responsive td:nth-of-type(9),
+    #overview table.overview-responsive th:nth-of-type(10),
+    #overview table.overview-responsive td:nth-of-type(10),
+    #overview table.overview-responsive th:nth-of-type(11),
+    #overview table.overview-responsive td:nth-of-type(11),
+    #available table.overview-responsive th:nth-of-type(4),
+    #available table.overview-responsive td:nth-of-type(4),
+    #available table.overview-responsive th:nth-of-type(9),
+    #available table.overview-responsive td:nth-of-type(9),
+    #available table.overview-responsive th:nth-of-type(10),
+    #available table.overview-responsive td:nth-of-type(10),
+    #available table.overview-responsive th:nth-of-type(11),
+    #available table.overview-responsive td:nth-of-type(11)
+    {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    #overview table.overview-responsive th:nth-of-type(3),
+    #overview table.overview-responsive td:nth-of-type(3),
+    #available table.overview-responsive th:nth-of-type(3),
+    #available table.overview-responsive td:nth-of-type(3)
+    {
+        display: none;
+    }
+}
+#popup .modal-body, #popup-desc .well {
+    padding-bottom: 0;
+}
+#popup ul.nav-tabs {
+    margin-bottom: 20px;
+}
+#popup ul.nav-tabs li, #popup-md {
+    cursor: pointer;
+}
+#popup-edit .form-control, #popup-edit .btn {
+    margin-bottom: 20px;
+}
+#popup-edit .help-block {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+#allocs-hover {
+    white-space: nowrap;
+}
+#allocs > span {
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 170%;
+    margin-right: 2px;
+    padding: 2px 5px;
+    white-space: nowrap;
+}
+#allocs > span.free {
+    background-color: #7e7;
+    color: #070;
+    font-weight: bold;
+}
+#allocs > span.free:hover {
+    background-color: #9f9;
+}
+#allocs > span.taken {
+    background-color: #f88;
+    color: #900;
+}
+#allocs > span.taken:hover {
+    background-color: #faa;
+}
+#allocs > span.unav {
+    background-color: #eee;
+    color: #bbb;
+    cursor: not-allowed;
+}
+#maps, #allocated {
+    padding-bottom: 15px;
+}
