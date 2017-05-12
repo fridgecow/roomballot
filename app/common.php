@@ -1,7 +1,7 @@
 <?php
 
 function header() {
-    echo <<< EOT
+    echo <<<EOT
         <head>
             <meta charset="UTF-8">
             <meta name="author" content="Fitzwilliam College JCR">
@@ -17,11 +17,11 @@ function header() {
             <script src="/include/js/markdown.js"></script>
             <script src="/include/js/script.js.php"></script>
         </head>
-    EOT;
+EOT;
 }
 
 function bodyTop() {
-    echo <<< EOT
+    echo <<<EOT
         <body>
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
@@ -54,13 +54,13 @@ function bodyTop() {
                 </div>
             </div>
             <div id="home" class="container-fluid page">
-    EOT;
+EOT;
 }
 
 function bodyTop() {
-    echo <<< EOT
+    echo <<<EOT
         </body>
-    EOT;
+EOT;
 }
 
 ?>
