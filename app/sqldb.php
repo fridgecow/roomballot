@@ -1,26 +1,36 @@
-<?
-class DB {
-    private static $conn = null;
-    private static $prefix = "";
-    public static function connect($host="localhost", $user="root", $pass=null, $db=null) {
+<?php
+
+class sqlDB {
+
+    private static $conn = null;          // database connection
+    private static $host = "localhost";   // database host machine
+    private static $user = "root";        // database username
+    private static $pass = null;          // database user password
+    private static $db = null;            // database name
+    private static $prefix = "";          // table prefix
+
+    public static function connect($host, $user $pass, $db) {
         DB::$conn = mysqli_connect($host, $user, $pass, $db);
     }
-    public static function setPrefix($newPrefix="") {
-        DB::$prefix = ($newPrefix ? $newPrefix : "");
-    }
+
     public static function query($query) {
         return mysqli_query(DB::$conn, $query);
     }
+
     public static function error() {
         return mysqli_error(DB::$conn);
     }
+
     public static function escape($str) {
         return mysqli_real_escape_string(DB::$conn, $str);
     }
+
     public static function insert($table, $vars) {
+        // check if we are connected to the database
         if (!DB::$conn) {
             DB::connect();
         }
+
         $rows = array_keys($vars);
         $vals = array_values($vars);
         foreach ($vals as $i => $val) {
@@ -44,10 +54,13 @@ class DB {
         $result = DB::query("INSERT INTO `" . $table . "` (`" . implode("`, `", $rows) . "`) VALUES (" . implode(", ", $vals) . ");");
         return $result ? true : false;
     }
+
     public static function update($table, $where, $vars) {
+        // check if we are connected to the database
         if (!DB::$conn) {
             DB::connect();
         }
+
         $rows = array_keys($vars);
         $vals = array_values($vars);
         $pairs = array();
@@ -73,19 +86,26 @@ class DB {
         $result = DB::query("UPDATE `" . $table . "` SET " . implode(", ", $pairs) . ($where ? " WHERE " . $where : "") . ";");
         return $result ? true : false;
     }
+
     public static function delete($table, $where) {
+        // check if we are connected to the database
         if (!DB::$conn) {
             DB::connect();
         }
+
         $table = DB::$prefix . $table;
         $result = DB::query("DELETE FROM `" . $table . "`" . ($where ? " WHERE " . $where : "") . ";");
         return $result ? true : false;
     }
+
     public static function fetch($table, $where=null, $sort=null, $limit=array(0, 1000)) {
+        // check if we are connected to the database
         if (!DB::$conn) {
             DB::connect();
         }
+
         $table = DB::$prefix . $table;
+        // define a string to store our SQL query
         $conds = "";
         if ($where) {
             $conds .= " WHERE " . $where;
@@ -96,6 +116,8 @@ class DB {
         $conds .= " LIMIT " . implode(", ", $limit);
         $result = DB::query("SELECT * FROM `" . $table . "`" . $conds . ";");
         $data = array();
+
+        // only parse the data if we were sucessful
         if ($result) {
             $count = 0;
             while ($row = mysqli_fetch_assoc($result)) {
@@ -105,10 +127,13 @@ class DB {
         }
         return $data;
     }
+
     public static function fetchJoin($fields, $tables, $where=null, $sort=null, $limit=array(0, 1000)) {
+        // check if we are connected to the database
         if (!DB::$conn) {
             DB::connect();
         }
+
         $field = implode(", ", $fields);
         foreach ($tables as $i => $table) {
             $tables[$i] = DB::$prefix . $table;
@@ -134,4 +159,5 @@ class DB {
         return $data;
     }
 }
+
 ?>
