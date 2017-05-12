@@ -57,7 +57,7 @@ function bodyTop() {
 EOT;
 }
 
-function bodyTop() {
+function bodyBottom() {
     echo <<<EOT
         </body>
 EOT;
