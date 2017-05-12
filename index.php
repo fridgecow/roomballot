@@ -1,6 +1,6 @@
 <?php
 
-require_once "php/common.php";
+require_once "app/common.php";
 
 if (auth(true)) {
     $minYear = $db->fetch("allocations", null, "`year` ASC", array(1));

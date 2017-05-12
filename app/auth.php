@@ -1,6 +1,6 @@
 <?php
 
-require_once "php/common.php";
+require_once "common.php";
 
 if (array_key_exists("logout", $_GET)) {
     session_unset();
