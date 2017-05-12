@@ -43,7 +43,7 @@ function bodyTop() {
                         <li><a href="guide.php">Ballot Guide</a></li>
                         <li><a href="rooms.php">Rooms in the Ballot</a></li>
                         <li><a href="houses.php">College-owned Houses</a></li>
-                        <li><a href="/login">Login with Raven</a></li>
+                        <li><a href="login.php">Login</a></li>
                     </ul>
                 </div>
             </div>
