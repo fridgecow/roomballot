@@ -8,14 +8,14 @@ function head() {
         <meta name="title" content="Fitz JCR Housing Ballot System">
         <meta name="description" content="">
         <title>Fitz JCR Housing Ballot System</title>
-        <link href="/include/img/icon.ico" rel="shortcut icon">
-        <link href="/include/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/include/css/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="/include/css/style.css" rel="stylesheet">
-        <script src="/include/js/jquery.min.js"></script>
-        <script src="/include/js/bootstrap.min.js"></script>
-        <script src="/include/js/markdown.js"></script>
-        <script src="/include/js/script.js.php"></script>
+        <!--<link href="/include/img/icon.ico" rel="shortcut icon">-->
+        <link href="include/css/bootstrap.min.css" rel="stylesheet">
+        <link href="include/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="/roomballot/include/css/style.css" rel="stylesheet">
+        <script src="/roomballot/include/js/jquery.min.js"></script>
+        <script src="/roomballot/include/js/bootstrap.min.js"></script>
+        <script src="/roomballot/include/js/markdown.js"></script>
+        <script src="/roomballot/include/js/script.js.php"></script>
     </head>
 EOT;
 }
@@ -48,11 +48,7 @@ function bodyTop() {
                 </div>
             </div>
         </nav>
-        <div id="loading" class="container-fluid">
-            <div class="alert alert-info">
-                <p>Just a moment...</p>
-            </div>
-        </div>
+        
         <div id="home" class="container-fluid page">
 EOT;
 }
