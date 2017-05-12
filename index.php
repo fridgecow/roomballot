@@ -2,24 +2,24 @@
 
 require_once "app/common.php";
 
-if (auth(true)) {
-    $minYear = $db->fetch("allocations", null, "`year` ASC", array(1));
-    $minYear = intval($minYear[0]["year"]);
-    $maxYear = $db->fetch("allocations", null, "`year` DESC", array(1));
-    $maxYear = intval($maxYear[0]["year"]);
-    $endYear = max($maxYear, intval(date("Y")));
-    // if year not set, or old and no allocations, or new and no allocations and a future year, then redirect to max
-    if (!is_numeric($_GET["_yr"]) || (intval($_GET["_yr"]) > intval(date("Y")) && count($db->fetch("allocations", "`year` = " . $_GET["_yr"], null, array(1))) === 0)) {
-        header("Location: /" . $maxYear . "#home");
-        die();
-    }
-    $year = intval($_GET["_yr"]);
-} else {
-    if ($_GET["_yr"]) {
-        header("Location: /#home");
-        die();
-    }
-}
+// if (auth(true)) {
+//     $minYear = $db->fetch("allocations", null, "`year` ASC", array(1));
+//     $minYear = intval($minYear[0]["year"]);
+//     $maxYear = $db->fetch("allocations", null, "`year` DESC", array(1));
+//     $maxYear = intval($maxYear[0]["year"]);
+//     $endYear = max($maxYear, intval(date("Y")));
+//     // if year not set, or old and no allocations, or new and no allocations and a future year, then redirect to max
+//     if (!is_numeric($_GET["_yr"]) || (intval($_GET["_yr"]) > intval(date("Y")) && count($db->fetch("allocations", "`year` = " . $_GET["_yr"], null, array(1))) === 0)) {
+//         header("Location: /" . $maxYear . "#home");
+//         die();
+//     }
+//     $year = intval($_GET["_yr"]);
+// } else {
+//     if ($_GET["_yr"]) {
+//         header("Location: /#home");
+//         die();
+//     }
+// }
 ?><!DOCTYPE html>
 <html>
     <?php header(); ?>
