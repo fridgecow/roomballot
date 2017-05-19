@@ -15,6 +15,7 @@ class Layout {
 		<link href="include/css/bootstrap-theme.css" rel="stylesheet">
 		<script src="include/js/bootstrap.js"></script>
 	</head>
+
 	<body>
 <?php
 	}
@@ -59,6 +60,7 @@ class Layout {
 
 	static function HTMLcontent($heading, $text) {
 ?>
+
 		<div class="container">
 			<div class="page-header">
 				<h1><?php echo $heading; ?></h1>
@@ -70,6 +72,7 @@ class Layout {
 
 	static function HTMLfooter() {
 ?>
+
 		<footer class="footer">
 			<div class="container">
 				<p class="text-muted">DEVELOPMENT VERSION.</p>
