@@ -19,20 +19,9 @@ class Layout {
 <?php
 	}
 
-	static function HTMLfooter() {
+	static function HTMLnavbar() {
 ?>
-		<footer class="footer">
-			<div class="container">
-				<p class="text-muted">DEVELOPMENT VERSION.</p>
-			</div>
-		</footer>
-	</body>
-</html>
-<?php
-	}
-
-	static function navbar() {
-?>
+		<!-- Fixed navbar -->
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -65,6 +54,29 @@ class Layout {
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
+<?php
+	}
+
+	static function HTMLcontent(heading, text) {
+?>
+		<div class="container">
+			<div class="page-header">
+				<h1><?php echo $heading; ?></h1>
+			</div>
+			<p><?php echo $text; ?></p>
+		</div>
+<?php
+	}
+
+	static function HTMLfooter() {
+?>
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted">DEVELOPMENT VERSION.</p>
+			</div>
+		</footer>
+	</body>
+</html>
 <?php
 	}
 }
