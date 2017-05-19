@@ -21,6 +21,11 @@ class Layout {
 
 	static function HTMLfooter() {
 ?></div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">DEVELOPMENT VERSION.</p>
+		</div>
+	</footer>
 	</body>
 </html>
 <?php
