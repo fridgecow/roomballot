@@ -62,4 +62,5 @@ class Layout {
 		</nav>
 <?php
 	}
+}
 ?>
