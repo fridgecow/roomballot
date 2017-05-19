@@ -57,7 +57,7 @@ class Layout {
 <?php
 	}
 
-	static function HTMLcontent(heading, text) {
+	static function HTMLcontent($heading, $text) {
 ?>
 		<div class="container">
 			<div class="page-header">
