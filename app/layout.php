@@ -1,5 +1,10 @@
 <?php
 
+require_once "lib/Michelf/MarkdownInterface.php";
+require_once "lib/Michelf/Markdown.php";
+require_once "lib/Michelf/MarkdownExtra.php";
+require_once "database.php";
+
 class Layout {
 	static function HTMLheader($pageTitle) {
 ?><!DOCTYPE html>
