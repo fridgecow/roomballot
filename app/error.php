@@ -45,9 +45,6 @@ class CustomError {
                 <div class="span1 ellipsis">
                     <h1>Error <?php echo $errorNumber; ?></h1>
                 </div>
-                <div class="span2 ellipsis">
-                    <h2 class="pull-right">Houston, We Have A Problem.</h2>
-                </div>
             </div>
             <h2><?php echo $errorMsg; ?></h2>
             <hr>
