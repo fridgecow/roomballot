@@ -23,10 +23,6 @@ if (array_key_exists("logout", $_GET)) {
         // store CRSiD in the session token
         $_SESSION["user"] = $authEngine->principal();
 
-        // check if user is a website administrator
-        // TODO read admin CRSiD's in from an external file that's easy to edit
-        $admins = array("members" => array("chtj2"));
-        $_SESSION["admin"] = in_array($_SESSION["user"], $admins["members"]);
 
         // check if the user is a member of Fitzwilliam College
         // TODO read member CRSiD's in from an external file that's easy to edit
