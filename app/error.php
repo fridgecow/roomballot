@@ -43,7 +43,7 @@ class CustomError {
         <div class="row-fluid">
             <div class="span3">
                 <div class="span1 ellipsis">
-                    <h1>Error <?php echo $errorNumber; ?></h1>
+                    <h1>An error has occurred</h1>
                 </div>
             </div>
             <hr>
@@ -57,7 +57,7 @@ class CustomError {
             <h3>What went wrong?</h3>
 
             <p>
-                <?php echo $errorMsg; ?>
+                Error <?php echo $errorNumber; ?>: <?php echo $errorMsg; ?>
             </p>
 
             <h3>What are the technical details?</h3>
