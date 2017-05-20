@@ -2,7 +2,7 @@
 
 class CustomError {
 
-    public static function halt($errorNumber, $errorMsg) {
+    public static function halt($errorNumber, $errorMsg, $errorFile, $errorLine) {
         ob_clean();
 ?>
 <!doctype html>
@@ -58,7 +58,7 @@ class CustomError {
             <h3>What went wrong?</h3>
 
             <p>
-                Error <?php echo $errorNumber; ?>: <?php echo $errorMsg; ?>
+                Error <?php echo $errorNumber; ?>: <?php echo $errorMsg; ?> occurred on line <?php echo $errorLine; ?> in <?php echo $errorFile; ?>
             </p>
 
             <h3>What are the technical details?</h3>
