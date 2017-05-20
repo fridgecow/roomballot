@@ -46,6 +46,7 @@ class CustomError {
                     <h1>An error has occurred</h1>
                 </div>
             </div>
+            <h2></h2>
             <hr>
 
             <h3>What does this mean?</h3>
