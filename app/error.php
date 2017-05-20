@@ -1,9 +1,5 @@
 <?php
 
-error_reporting(-1);
-ini_set("display_errors", 1);
-set_error_handler("Error::trigger");
-
 class Error {
 
     public static function trigger($errorNumber, $errorMsg) {
@@ -73,5 +69,9 @@ class Error {
         die();
     }
 }
+
+error_reporting(-1);
+ini_set("display_errors", 1);
+set_error_handler("Error::trigger");
 
 ?>
