@@ -1,8 +1,8 @@
 <?php
 
-class Error {
+class CustomError {
 
-    public static function trigger($errorNumber, $errorMsg) {
+    public static function halt($errorNumber, $errorMsg) {
 ?>
 <!doctype html>
 <html lang="en-GB">
@@ -72,6 +72,6 @@ class Error {
 
 error_reporting(-1);
 ini_set("display_errors", 1);
-set_error_handler("Error::trigger");
+set_error_handler("CustomError::halt");
 
 ?>
