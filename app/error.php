@@ -46,17 +46,24 @@ class CustomError {
                     <h1>Error <?php echo $errorNumber; ?></h1>
                 </div>
             </div>
-            <h2><?php echo $errorMsg; ?></h2>
             <hr>
 
             <h3>What does this mean?</h3>
 
             <p>
-                Something went wrong on our servers while we were processing your request.
-                The requested resource could not be found but may be available again in the future.
-                This occurrence has been logged, and a highly trained team of monkeys has been
-                dispatched to deal with your problem. We're really sorry about this, and will
-                work hard to get this resolved as soon as possible.
+                We're really sorry about this but something went wrong on our servers while we were processing your request. This occurrence has been logged, and we will work hard to get this resolved as quickly as possible.
+            </p>
+
+            <h3>What went wrong?</h3>
+
+            <p>
+                <?php echo $errorMsg; ?>
+            </p>
+
+            <h3>What are the technical details?</h3>
+
+            <p>
+                <?php debug_print_backtrace(); ?>
             </p>
         </div>
     </div>
