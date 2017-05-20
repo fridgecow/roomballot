@@ -3,6 +3,7 @@
 class CustomError {
 
     public static function halt($errorNumber, $errorMsg) {
+        ob_clean();
 ?>
 <!doctype html>
 <html lang="en-GB">
