@@ -1,5 +1,6 @@
 <?php
 
+require_once "app/error.php";
 require_once "app/layout.php";
 
 Layout::HTMLheader("Fitz JCR Housing Ballot System");
