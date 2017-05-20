@@ -3,8 +3,9 @@
  * Markdown  -  A text-to-HTML conversion tool for web writers
  *
  * @package   php-markdown
- * @author    Michel Fortin <michel.fortin@michelf.com>
  * @author    Charlie Jonas <charlie@charliejonas.co.uk>
+ * @author    Michel Fortin <michel.fortin@michelf.com>
+ * @copyright (changes) 2017 Charlie Jonas <https://github.com/CHTJonas/roomballot>
  * @copyright 2004-2016 Michel Fortin <https://michelf.com/projects/php-markdown/>
  * @copyright (Original Markdown) 2004-2006 John Gruber <https://daringfireball.net/projects/markdown/>
  */

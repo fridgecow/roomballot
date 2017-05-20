@@ -2,6 +2,7 @@
 
 require_once "lib/Michelf/MarkdownInterface.php";
 require_once "lib/Michelf/Markdown.php";
+require_once "lib/Michelf/SmartyPants.php";
 require_once "Database.php";
 
 class Layout {
@@ -70,7 +71,11 @@ class Layout {
 			<div class="page-header">
 				<h1><?php echo $heading; ?></h1>
 			</div>
-			<?php echo Markdown::defaultTransform($text); ?>
+			<?php
+                $html = Markdown::defaultTransform($text);
+                $html = SmartyPants::defaultTransform($html);
+                echo $html;
+            ?>
 		</div>
 <?php
 	}
