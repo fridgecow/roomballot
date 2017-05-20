@@ -1,21 +1,24 @@
 <?php
 
+require_once "environment.php";
+
 class Database {
 
-    // database connection
-    private $conn = null;
+    private $conn = null;       // database connection
+    private $prefix = null;     // table prefix
 
     // singleton design pattern
     private static $instance;
-    private function __construct($host, $user, $pass, $db) {
+    private function __construct($host, $user, $pass, $db, $pre) {
         $this->conn = mysqli_connect($host, $user, $pass, $db);
+        $this->prefix = $pre;
     }
     private function __clone() {}
     private function __sleep() {}
     private function __wakeup() {}
     public static function getInstance() {
         if (!isset(self::$instance)) {
-            self::$instance = new Database();
+            self::$instance = new Database(Environment::$db_host, Environment::$db_user, Environment::$db_pass, Environment::$db_name, Environment::$db_prefix);
         }
         return self::$instance;
     }
@@ -52,8 +55,8 @@ class Database {
                     break;
             }
         }
-        $table = Database::$prefix . $table;
-        $result = Database::query("INSERT INTO `" . $table . "` (`" . implode("`, `", $rows) . "`) VALUES (" . implode(", ", $vals) . ");");
+        $table = self::$prefix . $table;
+        $result = self::query("INSERT INTO `" . $table . "` (`" . implode("`, `", $rows) . "`) VALUES (" . implode(", ", $vals) . ");");
         return $result ? true : false;
     }
 
@@ -79,19 +82,19 @@ class Database {
             }
             $pairs[] = "`" . $rows[$i] . "` = " . $vals[$i];
         }
-        $table = Database::$prefix . $table;
-        $result = Database::query("UPDATE `" . $table . "` SET " . implode(", ", $pairs) . ($where ? " WHERE " . $where : "") . ";");
+        $table = self::$prefix . $table;
+        $result = self::query("UPDATE `" . $table . "` SET " . implode(", ", $pairs) . ($where ? " WHERE " . $where : "") . ";");
         return $result ? true : false;
     }
 
     public function delete($table, $where) {
-        $table = Database::$prefix . $table;
-        $result = Database::query("DELETE FROM `" . $table . "`" . ($where ? " WHERE " . $where : "") . ";");
+        $table = self::$prefix . $table;
+        $result = self::query("DELETE FROM `" . $table . "`" . ($where ? " WHERE " . $where : "") . ";");
         return $result ? true : false;
     }
 
     public function fetch($table, $where=null, $sort=null, $limit=array(0, 1000)) {
-        $table = Database::$prefix . $table;
+        $table = self::$prefix . $table;
         // define a string to store our SQL query
         $conds = "";
         if ($where) {
@@ -101,7 +104,7 @@ class Database {
             $conds .= " ORDER BY " . $sort;
         }
         $conds .= " LIMIT " . implode(", ", $limit);
-        $result = Database::query("SELECT * FROM `" . $table . "`" . $conds . ";");
+        $result = self::query("SELECT * FROM `" . $table . "`" . $conds . ";");
         $data = array();
 
         // only parse the data if we were sucessful
