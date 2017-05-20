@@ -71,7 +71,7 @@ class Layout {
 			<div class="page-header">
 				<h1><?php echo $heading; ?></h1>
 			</div>
-			<p><?php echo $text; ?></p>
+			<?php echo Markdown::defaultTransform($text); ?>
 		</div>
 <?php
 	}
