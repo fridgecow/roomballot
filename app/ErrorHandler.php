@@ -20,7 +20,7 @@ class ErrorHandler {
             case E_COMPILE_WARNING:
             case E_PARSE:
                 ob_clean();
-                ErrorHandler::layout($lasterror['type'], $lasterror['message'], $lasterror['file'], $lasterror['line']);
+                ErrorHandler::layout($lastError['type'], $lastError['message'], $lastError['file'], $lastError['line']);
                 die();
         }
     }
