@@ -1,7 +1,7 @@
 <?php
 
-require_once "app/error.php";
-require_once "app/layout.php";
+require_once "app/ErrorHandler.php";
+require_once "app/Layout.php";
 
 // buffer the output
 ob_start();
