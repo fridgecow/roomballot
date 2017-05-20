@@ -25,8 +25,7 @@ This project is open source, so if you'd like to help with development:
 For security reasons, we request that you keep information regarding room rents and photographs of College-owned rooms strictly confidential to the members of Fitzwilliam College. You are also warned that exploiting any online vunerabilities in Ballot System will not be tolerated. If anyone is known to have violated these rules, all information will be withdrawn and the person in question will be referred to the Senior Tutor and the Dean.
 
 ### About this site
-If you have any problem with the housing ballot you should contact the JCR Vice President at [jcr.vice.president@fitz.cam.ac.uk](mailto:jcr.vice.president@fitz.cam.ac.uk). To rep
-ort any technical issues with this website you are invited to contact the JCR Website Officer in confidence at [jcr.website@fitz.cam.ac.uk](mailto:jcr.website@fitz.cam.ac.uk).
+If you have any problem with the housing ballot you should contact the JCR Vice President at [jcr.vice.president@fitz.cam.ac.uk](mailto:jcr.vice.president@fitz.cam.ac.uk). To report any technical issues with this website you are invited to contact the JCR Website Officer in confidence at [jcr.website@fitz.cam.ac.uk](mailto:jcr.website@fitz.cam.ac.uk).
 
 ");
 Layout::HTMLfooter();
