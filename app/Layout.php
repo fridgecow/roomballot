@@ -3,7 +3,6 @@
 require_once "lib/Michelf/MarkdownInterface.php";
 require_once "lib/Michelf/Markdown.php";
 require_once "lib/Michelf/SmartyPants.php";
-require_once "Database.php";
 
 class Layout {
 	static function HTMLheader($pageTitle) {
