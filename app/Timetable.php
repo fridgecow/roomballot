@@ -23,7 +23,7 @@ class Timetable {
     public static function HTMLrow($num, $day, $date, $time, $event) {
 ?>
                             <tr>
-                                <td class="agenda-date" class="active" rowspan="1">
+                                <td class="agenda-date" rowspan="1">
                                     <div class="dayofmonth"><?php echo $num; ?></div>
                                     <div class="dayofweek"><?php echo $day; ?></div>
                                     <div class="shortdate text-muted"><?php echo $date; ?></div>
