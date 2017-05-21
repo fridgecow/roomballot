@@ -18,7 +18,7 @@ class Database {
     private function __wakeup() {}
     public static function getInstance() {
         if (!isset(self::$instance)) {
-            self::$instance = new Database(Environment::$db_host, Environment::$db_user, Environment::$db_pass, Environment::$db_name, Environment::$db_prefix);
+            self::$instance = new Database(Environment::db_host, Environment::db_user, Environment::db_pass, Environment::db_name, Environment::db_prefix);
         }
         return self::$instance;
     }
