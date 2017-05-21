@@ -7,9 +7,9 @@ class Environment {
 
     // database enviromental variables
     const db_host = "localhost";     // database host machine
-    const db_user = "";              // database username
-    const db_pass = "";              // database password
-    const db_name = "";              // database name
+    const db_user = "chtj2";              // database username
+    const db_pass = "VMkUFakJihsoXa8F22XVwBMUNvXvsmn5eCAQ5MngcmhCZX7frBZj8YgZAyBeW83g";              // database password
+    const db_name = "fitzjcr/housingballotsystem";              // database name
     const db_prefix = "";            // table prefix
 
     // Raven authentication module enviromental variables
