@@ -7,7 +7,7 @@ require_once "app/Database.php";
 // buffer the output
 ob_start();
 
-// if a page is not requested then serve the home page
+// if no page is requested then serve up the home page
 if (isset($_GET["q"])) {
     $page = $_GET["q"];
 } else {
