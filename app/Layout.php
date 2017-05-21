@@ -50,7 +50,7 @@ class Layout {
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ballot Order <span class="caret"></span></a>
 					  	<ul class="dropdown-menu">
 							<li><a href="order">Order of the Ballot</a></li>
-							<li><a href="shaddow">Shaddow Ballot</a></li>
+							<li><a href="shadow">Shadow Ballot</a></li>
 					  	</ul>
 					</li>
 					<li><a href="guide">Ballot Guide</a></li>
