@@ -20,13 +20,11 @@ body {
 
 /* Custom page CSS
 -------------------------------------------------- */
-.footer > .text-muted {
-    margin: 20px 0;
+.container .text-muted {
+  margin: 20px 0;
 }
 
 .footer > .container {
-    padding: 60px 15px 0;
-    margin: 20px 0;
     padding-right: 15px;
     padding-left: 15px;
 }
