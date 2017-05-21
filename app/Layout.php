@@ -3,6 +3,7 @@
 require_once "lib/Michelf/MarkdownInterface.php";
 require_once "lib/Michelf/Markdown.php";
 require_once "lib/Michelf/SmartyPants.php";
+require_once "app/Version.php";
 
 class Layout {
 	static function HTMLheader($pageTitle) {
@@ -85,7 +86,7 @@ class Layout {
 
 		<footer class="footer">
 			<div class="container">
-				<p class="text-muted">DEVELOPMENT VERSION.</p>
+				<p class="text-muted"><?php echo Version::getVersion(); ?></p>
 			</div>
 		</footer>
 	</body>
