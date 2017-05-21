@@ -3,7 +3,7 @@
 class Version {
     const MAJOR = 0;
     const MINOR = 1;
-    const PATCH = 95;
+    const PATCH = 103;
 
     public static function getVersion() {
         $commitHash = trim(exec('git log --pretty="%h" -n1 HEAD'));
