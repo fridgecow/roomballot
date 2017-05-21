@@ -14,16 +14,16 @@ if (isset($_GET["q"])) {
     $page = "home";
 }
 
-Layout::HTMLheader("Fitz JCR Housing Ballot System");
-Layout::HTMLnavbar();
-
-$queryString = "SELECT *  FROM `pages` WHERE `name` LIKE '" . $page . "'";
+$queryString = "SELECT *  FROM `pages` WHERE `url` LIKE '" . $page . "'";
 $result = Database::getInstance()->query($queryString);
 $row = $result->fetch_assoc();
 
+Layout::HTMLheader("Fitz JCR Housing Ballot System");
+Layout::HTMLnavbar();
+
 // check if the page requested actually exists or not
 if (isset($row)) {
-    Layout::HTMLcontent("Fitz JCR Housing Ballot System", $row["content"]);
+    Layout::HTMLcontent($row["title"], $row["content"]);
 } else {
     http_response_code(404);
     Layout::HTMLcontent("Fitz JCR Housing Ballot System", "The page requested does not exist.");
