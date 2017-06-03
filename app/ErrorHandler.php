@@ -21,7 +21,7 @@ class ErrorHandler {
             case E_COMPILE_WARNING:
             case E_PARSE:
                 ob_clean();
-                ErrorHandler::layout($lastError['type'], $lastError['message'], $lastError['file'], $lastError['line']);
+                ErrorHandler::layout("500 Internal Server Error", $lastError['type'], $lastError['message'], $lastError['file'], $lastError['line']);
                 die();
         }
     }
