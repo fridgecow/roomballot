@@ -4,7 +4,7 @@ class ErrorHandler {
 
     public static function error($errorNumber, $errorMsg, $errorFile, $errorLine, $errorContext) {
         ob_clean();
-        header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error');
+        http_response_code(500);
         ErrorHandler::layout("500 Internal Server Error", $errorNumber, $errorMsg, $errorFile, $errorLine);
         die();
     }

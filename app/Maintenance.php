@@ -11,7 +11,7 @@ class Maintenance {
     public static function maint() {
         if ($maint == true && empty($message) == false) {
             ob_clean();
-            header($_SERVER['SERVER_PROTOCOL'] . ' 503 Service Unavailable');
+            http_response_code(503);
             ErrorHandler::layout("503 Service Unavailable");
             die();
         }
