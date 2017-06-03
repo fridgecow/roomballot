@@ -1,6 +1,7 @@
 <?php
 
 require_once "app/ErrorHandler.php";
+require_once "app/Maintenance.php";
 require_once "app/Database.php";
 require_once "app/Layout.php";
 require_once "app/Content.php";
