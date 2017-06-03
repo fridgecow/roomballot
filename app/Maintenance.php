@@ -4,15 +4,15 @@ class Maintenance {
 
 
     // set the following to true and add a message to disable the site to visitors
-    public static $maint = true;
-    public static $message = "Site must first be enabled in app/Maintenance.php";
+    private static $maint = true;
+    private static $message = "Site must first be enabled in app/Maintenance.php";
 
 
     public static function maint() {
-        if ($maint == true && empty($message) == false) {
+        if (self::$maint == true && empty(self::$message) == false) {
             ob_clean();
             http_response_code(503);
-            ErrorHandler::layout("503 Service Unavailable");
+            Maintenance::layout("503 Service Unavailable", self::$message);
             die();
         }
     }
