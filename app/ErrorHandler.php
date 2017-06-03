@@ -33,6 +33,7 @@ class ErrorHandler {
     <head>
         <meta charset="utf-8">
         <title>An error has occurred</title>
+        <link href="include/img/icon.ico" rel="shortcut icon">
         <style type="text/css">
             @import url(https://fonts.googleapis.com/css?family=Droid+Sans);
             html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:sans-serif;color:#222;}
