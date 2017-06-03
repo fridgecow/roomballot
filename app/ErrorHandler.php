@@ -4,8 +4,8 @@ class ErrorHandler {
 
     public static function error($errorNumber, $errorMsg, $errorFile, $errorLine, $errorContext) {
         ob_clean();
-        ErrorHandler::layout($errorNumber, $errorMsg, $errorFile, $errorLine);
         header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error');
+        ErrorHandler::layout("500 Internal Server Error", $errorNumber, $errorMsg, $errorFile, $errorLine);
         die();
     }
 
@@ -26,7 +26,7 @@ class ErrorHandler {
         }
     }
 
-    private static function layout($errorNumber, $errorMsg, $errorFile, $errorLine) {
+    private static function layout($title, $errorNumber, $errorMsg, $errorFile, $errorLine) {
 ?>
 <!doctype html>
 <html lang="en-GB">
@@ -66,7 +66,7 @@ class ErrorHandler {
             <div class="row-fluid">
                 <div class="span3">
                     <div class="span1 ellipsis">
-                        <h1>An error has occurred</h1>
+                        <h1><?php echo $title; ?></h1>
                     </div>
                 </div>
                 <h2>&nbsp;</h2>
