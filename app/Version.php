@@ -6,6 +6,7 @@ class Version {
     const PATCH = 0;
 
     public static function getVersion() {
+        $commitNumber = trim(exec('git rev-list --count HEAD'));
         $commitHash = trim(exec('git log --pretty="%h" -n1 HEAD'));
         $commitDate = new \DateTime(trim(exec('git log -n1 --pretty=%ci HEAD')));
         $commitDate->setTimezone(new \DateTimeZone('UTC'));
