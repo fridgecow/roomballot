@@ -4,8 +4,8 @@ class Maintenance {
 
 
     // set the following to true and add a message to disable the site to visitors
-    $maint = true;
-    $message = "Site must first be enabled in app/Maintenance.php";
+    private static $maint = true;
+    private static $message = "Site must first be enabled in app/Maintenance.php";
 
 
     public static function maint() {
