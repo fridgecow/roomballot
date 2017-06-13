@@ -5,7 +5,7 @@ require_once "Environment.php";
 class Maintenance {
 
     public static function maint() {
-        if (Environment::maint_mode, == true && empty(Environment::maint_message) == false) {
+        if (Environment::maint_mode == true && empty(Environment::maint_message) == false) {
             ob_clean();
             http_response_code(503);
             Maintenance::layout("503 Service Unavailable", Environment::maint_message);
