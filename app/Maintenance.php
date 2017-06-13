@@ -67,7 +67,7 @@ class Maintenance {
                 <h3>What does this mean?</h3>
 
                 <p>
-                    The webmaster or another administrator has put the site into maintenance mode. This means that access to the web front-end has been blocked to prevent database and file system inconsistencies.
+                    The webmaster or another administrator has put the site into maintenance mode. This means that public access to the web front-end has been disabled.
                 </p>
 
                 <h3>What's going on?</h3>
