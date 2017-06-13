@@ -5,6 +5,10 @@ class Environment {
     // app enviromental variables
     const app_hostname = "";
 
+    // set the following to true and add a message to disable the site to visitors
+    const maint_mode = true;
+    const maint_message = "Site must first be enabled in app/Environment.php";
+
     // database enviromental variables
     const db_host = "localhost";     // database host machine
     const db_user = "";              // database username

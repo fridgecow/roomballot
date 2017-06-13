@@ -1,18 +1,14 @@
 <?php
 
+require_once "Environment.php";
+
 class Maintenance {
 
-
-    // set the following to true and add a message to disable the site to visitors
-    private static $maint = true;
-    private static $message = "Site must first be enabled in app/Maintenance.php";
-
-
     public static function maint() {
-        if (self::$maint == true && empty(self::$message) == false) {
+        if (Environment::maint_mode, == true && empty(Environment::maint_message) == false) {
             ob_clean();
             http_response_code(503);
-            Maintenance::layout("503 Service Unavailable", self::$message);
+            Maintenance::layout("503 Service Unavailable", Environment::maint_message);
             die();
         }
     }
